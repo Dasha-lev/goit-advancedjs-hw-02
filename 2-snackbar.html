@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Генератор промісів</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/izitoast/dist/css/iziToast.min.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: left;
+            margin-top: 50px;
+            background-color: #f8f8f8;
+        }
+
+        h2 {
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+
+        .form {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            padding: 20px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            max-width: 320px;
+            background-color: #fff;
+            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        label {
+            display: block;
+        }
+
+        input[type="number"] {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+
+        fieldset {
+            border: none;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            gap: 5px;
+        }
+
+        legend {
+            font-size: 16px;
+        }
+
+        .radio-group {
+            display: flex;
+            flex-direction: column;
+            gap: 5px;
+        }
+
+        button {
+            padding: 12px;
+            font-size: 18px;
+            cursor: pointer;
+            background-color:#f2f2f2;
+            color: #333;
+            border: none;
+            border-radius: 5px;
+            transition: 0.3s;
+        }
+    </style>
+  <script type="module" crossorigin src="/goit-advancedjs-hw-02/2-snackbar.js"></script>
+  <link rel="modulepreload" crossorigin href="/goit-advancedjs-hw-02/assets/modulepreload-polyfill-B5Qt9EMX.js">
+  <link rel="modulepreload" crossorigin href="/goit-advancedjs-hw-02/assets/vendor-A92OCY9B.js">
+  <link rel="stylesheet" crossorigin href="/goit-advancedjs-hw-02/assets/vendor-CUZofXIC.css">
+</head>
+<body>
+
+    <h2>Завдання 2. Генератор промісів</h2>
+
+    <form class="form">
+        <label>
+            Delay (ms)
+            <input type="number" name="delay" required />
+        </label>
+
+        <fieldset>
+            <legend>State</legend>
+            <div class="radio-group">
+                <label>
+                    <input type="radio" name="state" value="fulfilled" required />
+                    Fulfilled
+                </label>
+                <label>
+                    <input type="radio" name="state" value="rejected" required />
+                    Rejected
+                </label>
+            </div>
+        </fieldset>
+
+        <button type="submit">Create notification</button>
+    </form>
+
+
+</body>
+</html>
